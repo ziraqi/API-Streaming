@@ -105,5 +105,10 @@ st.plotly_chart(fig2, use_container_width=True)
 # If auto-refresh is ON, wait and rerun the app
 if auto_refresh:
     time.sleep(refresh_sec)
+<<<<<<< HEAD:pages/2_Weather.py
     get_weather.clear()  # Clear cache to fetch fresh data
     st.rerun()
+=======
+    get_weather.clear()
+    st.rerun()
+>>>>>>> 14949dacb9a534cf964a2cf9dafce9d576b698f4:pages/2_weather.py
