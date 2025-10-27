@@ -36,7 +36,7 @@ if "weather_history" not in st.session_state:
     st.session_state.weather_history = []
 
 # Section 3: Fetch (Cached)
-@st.cache_data(ttl=30, show_spinner=False)  # Cache for 10 minutes
+@st.cache_data(ttl=30, show_spinner=False)  # Cache for 30 seconds
 def get_weather():
     """Return (df, error_message). Never raise. Safe for beginners."""
     try:
@@ -105,10 +105,5 @@ st.plotly_chart(fig2, use_container_width=True)
 # If auto-refresh is ON, wait and rerun the app
 if auto_refresh:
     time.sleep(refresh_sec)
-<<<<<<< HEAD:pages/2_Weather.py
-    get_weather.clear()  # Clear cache to fetch fresh data
-    st.rerun()
-=======
     get_weather.clear()
     st.rerun()
->>>>>>> 14949dacb9a534cf964a2cf9dafce9d576b698f4:pages/2_weather.py
